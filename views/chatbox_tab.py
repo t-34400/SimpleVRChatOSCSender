@@ -42,7 +42,7 @@ class ChatboxTab:
         self.toggle_indicator_group = tk.Frame(root)
         self.toggle_indicator_group.pack(side=tk.TOP, padx=10, pady=10)
 
-        self.toggle_indicator_label = tk.Label(self.toggle_indicator_group, text="Show input Indicator: ")
+        self.toggle_indicator_label = tk.Label(self.toggle_indicator_group, text="Show typing Indicator: ")
         self.toggle_indicator_label.pack(side=tk.LEFT)
 
         self.toggle_indicator_checkbutton = tk.Checkbutton(self.toggle_indicator_group, variable=self.params.show_typing_indicator_var)

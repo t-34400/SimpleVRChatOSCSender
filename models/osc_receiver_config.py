@@ -7,7 +7,7 @@ class OSCReceiverConfig:
         self.local_ip_var = tk.StringVar()
         self.local_ip_var.set("127.0.0.1")
         self.local_port_var = tk.IntVar()
-        self.local_port_var.set(9000)
+        self.local_port_var.set(9001)
     
     def get_local_ip_and_port(self):
         return self.local_ip_var.get(), self.local_port_var.get()
