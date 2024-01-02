@@ -32,12 +32,12 @@ class TrackerParams:
     trackers = [
             "Hip",
             "Chest",
-            "Left foot",
             "Right foot",
-            "Left knee",
+            "Left foot",
             "Right knee",
-            "Left elbow",
+            "Left knee",
             "Right elbow",
+            "Left elbow",
             "Head"
         ]
 
