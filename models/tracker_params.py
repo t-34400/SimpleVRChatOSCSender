@@ -36,15 +36,15 @@ class TrackerVar:
 
 class TrackerParams:
     trackers = [
+            "Head",
             "Hip",
             "Chest",
-            "Right foot",
             "Left foot",
-            "Right knee",
+            "Right foot",
             "Left knee",
-            "Right elbow",
+            "Right knee",
             "Left elbow",
-            "Head"
+            "Right elbow",
         ]
 
     def __init__(self):
