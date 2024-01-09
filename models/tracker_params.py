@@ -12,10 +12,16 @@ class TrackerVar:
         self.rotation_components = [ self.euler_x, self.euler_y, self.euler_z ]
 
     def get_position(self):
-        return (self.x.get(), self.y.get(), self.z.get())
+        try:
+            return (self.x.get(), self.y.get(), self.z.get())
+        except:
+            return None
     
     def get_euler_angles(self):
-        return (self.euler_x.get(), self.euler_y.get(), self.euler_z.get())
+        try:
+            return (self.euler_x.get(), self.euler_y.get(), self.euler_z.get())
+        except:
+            return None
     
     def register_position_update_listener(self, listener):
         self.x.trace_add("write", listener)

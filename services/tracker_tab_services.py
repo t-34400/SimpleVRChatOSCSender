@@ -14,6 +14,9 @@ class TrackerTabServices:
             tracker_var.register_rotation_update_listener(lambda *_, index=index, tracker_var=tracker_var: self.on_rotation_update(index, tracker_var.get_euler_angles()))
 
     def on_position_update(self, index, position):
+        if not position:
+            return
+
         if index == self.head_index:
             address = str.format(self.position_address_format, "head")
         else:
@@ -22,6 +25,9 @@ class TrackerTabServices:
         self.sender.send(address, position)
         
     def on_rotation_update(self, index, euler_angles):
+        if not euler_angles:
+            return
+        
         if index == self.head_index:
             address = str.format(self.rotation_address_format, "head")
         else:
