@@ -12,10 +12,14 @@ class ReceivedAvatarParam:
         elif isinstance(value, float):
             self.value_var = tk.DoubleVar()
             self.sender_value_var = tk.DoubleVar()
+        elif isinstance(value, str):
+            self.value_var = tk.StringVar()
+            self.sender_value_var = tk.StringVar()
         else:
             print(f"It's of an unknown type: {value}")
             self.value_var = tk.BooleanVar()
             self.sender_value_var = tk.BooleanVar()
+            value = False
 
         self.value_var.set(value)
         self.sender_value_var.set(value)
